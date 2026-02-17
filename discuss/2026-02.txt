@@ -1,0 +1,39 @@
+Date and Time: 2026-02-17 12:30p ET
+
+Should we alert on all or some environments?
+* No. humans likely to already to be looking at environments under test.
+* Yes. QA the logs and metrics and alerts
+* Yes. Test everything bottom to top. Automate everything, including provisioning/deploying to environments. Allows comparison between environments
+* Yes. Use different environments to test different risk vectors.
+
+From the last meeting - someone suggested using RACI (responsible, accountable, consulted and informed matrix) chart for post Initial program deployment into production support
+* business problem of unowned systems in production. Expect people to come and go.
+* service definition platform registry for owners. HOTS (handover/handoff to support) doc describes plan during deploy to production
+* Instead of abstract RACI, describe scenarios of when to contact teams or individuals
+* have a bot to monitor for zombies (people left the company, or service hasn't been manually deployed recently)
+
+Auto-documentation generation from code… and _from production_?
+* Interest in an SRE-centric version of https://codewiki.google/ ?
+* Gemini CLI has been used to look at source code and generate traditional docs (system architecture, flow diagrams)
+* A team is experimenting with looking at services holistically including dependencies from production configs, logs, and incidents to generate a catalog of 1st party services, dependencies, and snippets about recent history of production
+* This sounds more like dynamic observability than static documentation.
+* This can be fed to AI agents for planning.
+* Only 30% of tool calls into db were traditionally observable during incident response (70% were not!)
+
+Disaster Recovery (Best practices, ideas, how to track this)
+* Best tools from GCP, automated scraping network topology, db-centric
+* Guides or books to use as reference aside from SRE Google
+* https://cloud.google.com/blog/topics/developers-practitioners/how-google-sres-use-gemini-cli-to-solve-real-world-outages
+* Tabletop exercise
+* Requires business context of what is needed for the company and the local constraints on people and time and coordinating system states (eg: flush pipelines). One person used a big spreadsheet to project track all the tables, teams, people, and features.
+* suggestion: require app developers to provide a services page listing dependencies, perhaps custom HTTP response codes to indicate partial functionality or more verbose metadata about expected degradation per dependency
+* suggestion: prioritize functions and user stories, not entire services or datastores
+* practice taking entire system down to speed up recovery time (eg: annual maintenance)
+* Contact Artur later https://www.linkedin.com/in/arturmartins/ if you'd like to continue discussing DR
+
+Staging environment - good or bad idea?
+* 40 environments for compliance, (zero for production!) just to demonstrate environmental differences. depends on use case
+
+Using Nexus https://www.sonatype.com/products/sonatype-nexus-repository - how does it reload libraries? Could this lead to potential silent build issues?
+* Your team will put snapshots of libraries (artifacts) into Nexus.
+* Apps can still fail at runtime with runtime issues and not compile time issues. These will only be detectable by exercising the application and verifying the _behavior_ you expect.
