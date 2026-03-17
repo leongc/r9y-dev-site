@@ -1,0 +1,17 @@
+Date and Time: 2026-03-17 12:30p ET
+
+Reliability in the face of Agentic YOLO
+* No "death penalty" or punishment for agents, so YOLO applies to the humans directing them.
+* Consequences or repeatability. Ownership without liability.
+* Corporations can take responsibility, but for agents?
+
+Uptime measurement for non-IT topics. eg: key services for non-technology. Can we use tech observability metrics?
+* Metrics can describe observed availability
+* Service Level Objectives SLOs https://www.alex-hidalgo.com/the-slo-book as quantified customer experience for humans, not machines.
+* Similar to standard business Key Performance Indicators, not necessarily technical, but observability might have non technical measurement costs
+* Employees could measure "unacceptable" or customers could report "unacceptable"
+* Data collection fidelity and timeliness relies on humans. User Experience (UX) design may explain or assist in data collection goal.
+* UX intro? https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things Donald Norman
+* Recovery Time Objectives and Recovery Point Objectives are like SLOs, but at machine level.
+* Service degradation: we can't serve coffee vs we can serve coffee but it will be cold or late
+* Customer journey includes signaled expectations on the way in (eg: queue length, signage)
