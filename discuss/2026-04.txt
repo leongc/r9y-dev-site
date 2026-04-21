@@ -1,0 +1,16 @@
+Date and Time: 2026-04-21 12:30p ET
+
+Incorporating SRE frameworks into cybersecurity
+* how to insert frameworks into cybersecurity that would align with the rest of the org? eg: observability, to automation, then predictive analytics
+* security forked away from joint reliability leadership. SRE is about stability and operational risk, security is about defense and supply chain risk in the SDLC.
+* make room for each department to contribute their skills and expertise in the delivery process. 
+
+Are you involved in building AI systems as a company product? If so, any lessons learned?
+* guardrails to protect the platform, observability, or monitoring to avoid giving confidential data to public LLMs and control costs
+
+AI SRE - are you actually using it? How well is it doing?
+* new SRE book will have two new sections, one of which will have AI. Site Reliability Engineering, 2nd Edition - Chapter 4. AI for SRE: https://www.oreilly.com/library/view/site-reliability-engineering/9798341607675/ch04.html
+* Would AI be automating manual toil that are actually bugs, eg: restart crashing k8s pod?
+* differentiate between temporary mitigation and permanent solution
+* two major market approaches: AI replacing human SREs vs AI augmenting human SREs. Similarly, is the AI contributing to architecture up front, or handling existing operations in whatever shape it is in
+* LLM can be good for automating routing diagnostics or observability, but weaker at sense making.

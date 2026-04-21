@@ -41,6 +41,7 @@ This conversation is what you choose it to be! Participants are welcome to to pr
 
 ## Summaries of recent discussions
 
+* [2026-April](2026-04.txt)
 * [2026-March](2026-03.txt)
 * [2026-February](2026-02.txt)
 * [2026-January](2026-01.txt)
