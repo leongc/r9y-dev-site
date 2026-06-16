@@ -1,0 +1,30 @@
+Date and Time: 2026-06-16 12:30p ET
+
+System design but for AI systems - what extra skills “Classic” SRE need to be aware of (Observability Gaps,Governance & Safety, Capacity Planning, Regression, etc). or Forward Deployed Engineers?
+* Classic design ~ monthly users, storage; AI enabled ~ MLOps, LLMops, Data Model, regressions, token efficiency. Resources for learning?
+* Forward Deployed Engineers – engineers assigned to customers. Somehow different from Solution Engineer, with observability and scaling responsibilities. Perhaps similar to Customer Reliability Engineer.
+* Same as it ever was? Employers want employees to do more things plus AI.
+* "Classic" software was deterministic and black and white for correctness, but with AI/LLM output there is variance. Do SLOs and SLIs work to measure AI response content?
+* Enumerate broken user scenarios to learn desired behavior and anticipate possible conditions
+
+how to get to a position to solve a ‘scaling’ issue or is that myth and the journey is as we solve tiny scale issues over time …. >> ok my real question is how to qualify for certain jobs which require having scaled something large
+* How do you get "scale" experience without having scaled yet?
+* You don't. You have your scale challenge experiences.
+* Is there something different about scaling up AI deployments?
+
+AI chatbots substitute partially for conversations with teammates, but fail to produce social outcomes like consensus
+* teammates are missing out on a shared mental model of the topic under discussion which is useful context for future work on the project and end up with divergent
+* chatbot implicitly gets a vote by participating in lieu of asking a human
+* chatbot is aggregate knowledge for multiple people which may be valued more than local context
+* accountability or intent for AIs; maybe transitively for the people for the humans who chose the chatbots
+
+Vendors pushing AI SRE (Elastic Kubernetes Investigations Agent, New Relic SRE Agent). Any field reports?
+* https://newrelic.com/platform/sre-agent
+* https://www.elastic.co/observability-labs/blog/ai-powered-kubernetes-observability-elastic-mcp
+* Linux Sysadmin AI: needs handholding and it failed how to install secureboot.
+* Datadog watchdog anomaly detection → bits AI SRE https://www.datadoghq.com/dg/monitor/bits-ai-sre/ : is a hypochondriac. Can propose many possibilities without regard to cost.
+* Decompensation – both in social mechanisms and technical ones. Provides ways to handle system stress, not obvious from raw source
+** Fred Hebert writes in Decompensation and Cascading Failures  https://resilienceinsoftware.org/news/11454232
+* When the AI is On-Call - Thinking Out Loud with Niall Murphy https://resilienceinsoftware.org/networks/events/253432
+** AI tools are increasingly showing up in SRE and incident response workflows, but what does that actually mean for the humans in the system? Not the benchmarks, not the vendor promises: the real questions about expertise, tribal knowledge, collaborative sensemaking, adaptive capacity, and what happens when these things get widely deployed.
+** In this session, you are invited to a facilitated conversation with Niall Murphy to think out loud together on the bigger questions: what do these products contribute to — or take away from — the human side of the sociotechnical system? If you've found yourself with more questions than answers about AI in your practice, this is the session for you.
