@@ -1,0 +1,19 @@
+Date and Time: 2026-07-21 12:30p ET
+
+How do we bring in other people here or do we want to? I’d like to hear different
+* Cheng says: please invite others to join “reliability-discuss” at https://groups.google.com/g/reliability-discuss
+* Discord chat (free, but dead) r9y.dev/chat is https://discord.gg/NkmxCSkq7c
+* Slack community (paid) https://resilienceinsoftware.org/
+
+What do you try to do in the first, say, 30 days of starting in a reliability role to show value?
+* suggestion: take inventory of where the organization is on this r9y map https://map.r9y.dev/beck/map.html
+* product manage what is being built for customers, evaluate existing experiments and costs
+* learn production; shadow on call. Interview operators, engineers, product owners, support, management chain, etc. Learn what is scary/risky, what makes customers happy/sad, what is valuable for the company, and identify misalignments.
+* written runbooks might not be accurate... for non-obvious business reasons. eg: compliance, conflicting shadow system, politics, etc.
+* you can deliver a map of risks according to operators, engineers, and business executives (assuming you've been hired to manage risks), and see how it aligns (or diverges) from the existing product roadmap or company strategy
+
+The division of labor between teams allows faster feature dev, but it also means issues have cracks to slip through… how have you seen this solved
+* eg: front-end, continuous integration, infrastructure, back-end. silos result in Conway's law (system mirrors org structure)
+* communication of system view is key across silos
+* any org structure has weaknesses, make sure it solves the biggest set of problems or hits the biggest opportunities. If new problems or opportunities arise and cannot be assigned without crossing org boundaries, maybe it is time for a reorg! Realign responsibilities to single owners and pay the reorg tax.
+
