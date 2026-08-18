@@ -1,0 +1,21 @@
+Date and Time: 2026-08-18 12:30p ET
+
+Deployment strategies.  I like the combination of blue/green + canary (on-prem)
+* Detect deployment failures in production early. Compare exception rates between the servers. Send variances to developers for review/release.
+* QA was insufficient because it did not have production load
+* What does normal look like? A noise floor exists that makes it tough to detect issues at 1% rates.
+* Another person uses timed tiered UI rollouts from least sensitive to most sensitive. The UI is db version-aware.
+* Use SLO/SLI counting of "errors" crashing not ok, 500 errors are unexpected, 400 unauthorized is ok.
+
+Performance - how do you quantify when to address performance caused by upstream?
+* Situation: incoming data processing has lag in response when the processing rate falls behind the incoming queue or backlog. Developers have no incentive to speed things up for handling backlog.
+* SLOs should include performance (response time) and a measurement time window in addition to correctness of payload (eg: XX.X% correct answer within 200ms over the past 30 days)
+* For each SLO also provide a couple of examples of harmful conditions that would not trigger this SLO
+* https://sre.google/sre-book/service-level-objectives/ and https://www.alex-hidalgo.com/the-slo-book
+* Use nginx rule to replay requests with 500 responses or 20s timeout to a debug version of the server. trick from https://x.com/syshero (blog: https://syshero.org)
+* Use Architectural Decision Records to log rationale for designs and values chosen.
+* Ensure your timeout funnel monotonically widens towards consumers. Setting the same timeout limits throughout the chain is even more confusing due to race conditions for different items failing at slightly different times.
+
+What have your experiences been with higher level middle managers or directors in reliability/observability space, especially at large companies - over 500 employees
+* Make sure your whole organization knows about wins from your local SRE group, especially proactive wins
+* Point out system illness and potential counterfactuals in terms of business risk (not technical)
