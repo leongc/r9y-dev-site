@@ -1,0 +1,26 @@
+Date and Time: 2026-09-15 12:30p ET
+
+Opensource community responses to LLMs
+* Giant projects (eg: Linux) and Tiny projects have different responses to LLM-based pull requests. eg: matplotlib, zig (ghosttty, block), llvm (allow but human responsibility)
+* Consider Codebase and Reviewers (as resources) independently
+* Continuum of how important to understand the code (LLVM vs pet project) may influence where to draw/hold a line on how to handle LLM contributions
+* How can four reviewers on an open source project handle the flood of LLM contributions while balancing the longevity of the project? What are other projects seeing in policy implications and social contracts?
+* Low barrier of entry to submit ideas, however low alignment with project. Code contributions vs functional contracts with community?
+* Do contributions meet the standard of care for the local rules of the area of the codebase they relate to? Prioritize review of submissions by level of potential ROI according to reviewers.
+
+What is the single most impactful change/process that has improved reliability in a complex system?
+* Step 1: Convince management to invest.
+* Exception management is common. Short term pain might be felt in a different part of the org from the long term pain. Someone needs to bring them together (or bring long term considerations to the table). Allow management to try short term features; differentiate from platform infrastructure changes.
+* Most engineering leaders are reactive and only think about reliability when it breaks. No standard for getting to more proactive practice.
+* Antipattern: feature developers vs reliability developers to maintain feature velocity with the feature developers.
+* Do customers want to buy features or reliability? Business can seesaw along with customer attention (business need).
+* Incident management, monitoring, and observability are easily visible and easier to invest in.
+* r9y feature map https://map.r9y.dev/beck/map.html
+* Adding timeouts.
+
+Reliable AI agentic development loops?
+* Hypothesis: put reliability in the harness.
+* When the desire is there, SWEs will work around bureaucracy. Life, uh, finds a way.
+* Invest in enabling tooling instead of gatekeeping tooling.
+* Teach harnesses to solve problems in a human-understandable manner (eg: move from line-oriented changes (ed), to character (interactive terminal))
+* Agent code-generation going into traditional insertion point in SDLC vs theoretical devops to understand standards, code style, patterns, architecture.
